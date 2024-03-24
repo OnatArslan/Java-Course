@@ -8,8 +8,17 @@ public class Account {
     private int currentMoney;
 
     public Account() {
+        this(123, "default name", "default surname", "exmaple@gmail.com", 0);
+        System.out.println("Empty constructor called!!"); // This is constructor chaining and this() function must be first line
     }
+    public Account(int id, String customerName, String Surname, String Email, int currentMoney) {
+        this.id = id;
+        this.Name = customerName;  // This is a constructor with parameters
+        this.Surname = Surname;
+        this.Email = Email;
+        this.currentMoney = Math.max(currentMoney, 0);
 
+    }
     public String toString() {
         return "Account(id=" + this.getId() + ", customerName=" + this.getName() + ", customerSurname=" + this.getSurname() + ", customerEmail=" + this.getEmail() + ", currentMoney=" + this.getCurrentMoney() + ")";
     }
@@ -38,14 +47,7 @@ public class Account {
         this.id = id;
     }
 
-    public Account(int id, String customerName, String Surname, String Email, int currentMoney) {
-        this.id = id;
-        this.Name = customerName;
-        this.Surname = Surname;
-        this.Email = Email;
-        this.currentMoney = Math.max(currentMoney, 0);
 
-    }
 
     public void setName(String name) {
         this.Name = name;

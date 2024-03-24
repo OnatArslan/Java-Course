@@ -8,10 +8,10 @@ public class Car {
     private int doors = 4;
     private boolean convertible = true;
 
-    public Car() {
+    public Car() {  // this is a constructor and don't take return parameter
     }
 
-    public Car(String make, String model, String color, int doors, boolean convertible) {
+    public Car(String make, String model, String color, int doors, boolean convertible) { // this is cons with parameters
         this.make = make.toLowerCase();
         this.model = model.toLowerCase();
         this.color = color.toLowerCase();
